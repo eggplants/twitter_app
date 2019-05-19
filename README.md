@@ -10,3 +10,4 @@
 - [LINE API](https://developers.line.biz/)
   - access token
   - user id
+(please make **conf.py** by rewriting **conf_example.py**)
