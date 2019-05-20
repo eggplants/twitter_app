@@ -2,8 +2,11 @@ from requests_oauthlib import OAuth1Session
 from linebot import LineBotApi
 from linebot.models import TextSendMessage,ImageSendMessage
 from time import sleep
-import conf
-import json,sys,requests
+import conf,json,sys,requests
+###this program is....
+#####to detect update of user(RT,tweet)
+#####then, notify line talk room
+#####if the tweet contains a img, it sends there
 t_url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
 #twitter request
 old=0

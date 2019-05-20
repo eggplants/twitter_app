@@ -1,6 +1,8 @@
 from requests_oauthlib import OAuth1Session
-import json
-import conf
+import json,conf
+###this program is....
+#####to get all user's tweet_ids
+#####then, print to stdout
 url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
 twit=200
 max=""

@@ -24,7 +24,7 @@ while True:
                 l = LineBotApi(conf.l_AT)
                 messages = TextSendMessage(text=lines["text"]+"\n"
                                                 +lines['created_at']+"\ntwitter.com/"
-                                                +t_id+"/status/"+lines["id_str"])
+                                                +conf.t_user_id+"/status/"+lines["id_str"])
                 l.push_message(conf.l_id, messages=messages)
                 old = lines["id"]
     else:
