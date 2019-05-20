@@ -11,4 +11,5 @@ l_AT= 'xx'
 #line talkroom id
 l_id = "xx"
 #terget user id("screen_name")
-t_user_id="xx"
+print("plz enter a terget user's screen id")
+t_user_id=input()
