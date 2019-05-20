@@ -1,13 +1,13 @@
 #twitter consumer key
-CK = '0uWs2GPc0WHf1D4FAxaF2uLAS'
+CK = 'YsJbJ1JRMEuS2GKRyL3rSEPjQ'
 #twitter consumer sec
-CS = 'MX1YwIX7HrQjoTeJwvAJhKRTbwTTF3BVkU7bimRRe9XqB35a99'
+CS = '5av6m6nAjeZNEmr1983UwCnaAAvXwSoNJkAHPOdRi2ijgwfQZl'
 #twitter access token
-t_AT = '1001294928037621761-eWnoi6detBxu6BrwscjSYa2P2PhHzo'
+t_AT = '1001294928037621761-XjsZDhbbNVyyMKQHrZ76XAaFOUpGkc'
 #twitter access sec
-AS = 'Hi5B97o7Jqe3LRWqFQ2pLTICU3xbAptD7JxHj7k2EkLHF'
+AS = 'FBEYSTf7HCm10dmKOM1dy5v2ycmMlLkYLkNDOLMY7dG41'
 #line access token
-l_AT= 'QoaRKeTlI/ECz2W+bh97HcFn87NPg2sHxikIx6iQ+5YU8pVD7nDJ8zsyTgwiZg3oWOZWiHe0n4NEq7TLDUU3VNWX5TwPlWQsRkNzyq+0u6hOyi1091cIlZA8eNcoqzE9avz92bHdRhWrRI8ma2yLOAdB04t89/1O/w1cDnyilFU='
+l_AT= 'gYAuGCyp8y7PwxGPi3aOPKshDhPyTYuqNDgQ/IezvTNuuEG6st0MZMq/kQv4eKXrWOZWiHe0n4NEq7TLDUU3VNWX5TwPlWQsRkNzyq+0u6hWsM/81oU/6m9hh32TRwUPybctKMosGxywhZmaZ62NuwdB04t89/1O/w1cDnyilFU='
 #line talk id
 l_id = "U4336c514600c43f499e31f918dfb4ca6"
 
