@@ -17,7 +17,7 @@ from linebot.models import TextSendMessage
 
 import conf
 #get favs or tweets data
-def retrieve(url,s):
+def retrieve(url,session):
     max=""
     params = {
     'count' : 200,
@@ -46,14 +46,14 @@ def retrieve(url,s):
 #schedule func using higher-order function(func,time)
 #download from url(url,savepath=os.getcwd())
 #delete tweet every tweet_id
-def del_twe(id_twe,s):
+def del_twe(id_twe,session):
     url="https://api.twitter.com/1.1/statuses/destroy/"+str(id_twe)+".json"
     params = {
     "trim_user" : "false"
     }
     res = s.post(url, params = params)
 #delete favorite every favorite_id
-def del_fav(id_fav,s):
+def del_fav(id_fav,session):
     url="https://api.twitter.com/1.1/favorites/destroy.json"
     params = {
     "id" : id_fav,
@@ -68,24 +68,22 @@ def notify_line(seed,result,message):
     )
     l.push_message(conf.l_id, messages=messages)
 #delete half of favorites
-def del_fav_hal(list_fav,s):
+def del_fav_hal(list_fav,session):
     for id in list_fav[0][list_fav[1]:]:
-        del_fav(id,s)
+        del_fav(id,session)
     return "いいね半消し"
 #delete favorites all
-def del_fav_all(list_fav,s):
+def del_fav_all(list_fav,session):
     for id in list_fav[0]:
-        del_fav(id,s)
-    return "いいね全消し"
+        del_fav(id,session)
 #delete half of tweets
-def del_twe_hal(list_twe,s):
+def del_twe_hal(list_twe,session):
     for id in list_twe[0][list_twe[1]:]
-    return "つぶやき半消し"
 #delete tweets all
-def del_twe_all(list_twe,s):
+def del_twe_all(list_twe,session):
     for id in list_twe:
-        del_twe(id,s)
-    return "つぶやき全消し"
+        del_twe(id,session)
 #do nothing
 def del_nothing():
-    return "なにもなし"
+    return 0
+#################
