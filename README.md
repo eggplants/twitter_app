@@ -4,6 +4,7 @@
   - [requests-oauthlib](https://github.com/requests/requests-oauthlib)
   - [line-bot-sdk-python](https://github.com/line/line-bot-sdk-python)
   - [requests](https://github.com/kennethreitz/requests)
+  - [schedule](https://github.com/dbader/schedule) 
 - [Twitter API](https://developer.twitter.com/)
   - consumer key(pub, sec)
   - access token(pub, sec)
