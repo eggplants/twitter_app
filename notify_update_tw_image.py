@@ -28,7 +28,7 @@ while True:
                 l = LineBotApi(conf.l_AT)
                 messages = TextSendMessage(text=lines["text"]+"\n"
                                                 +lines['created_at']+"\n"
-                                                +"twitter.com/"+conf.t_id+"/status/"+lines["id_str"])
+                                                +"twitter.com/"+conf.t_user_id+"/status/"+lines["id_str"])
                 l.push_message(conf.l_id, messages=messages)
                 #with image
                 try:
