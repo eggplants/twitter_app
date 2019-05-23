@@ -8,14 +8,18 @@
 #l_id       line talkroom id
 #t_user_id  terget user id("screen_name")
 ###############
+#std lib
 import json,sys,random,time,urllib.request,os,csv
-
+#3rd-party lib
 import requests,schedule
 from requests_oauthlib import OAuth1Session
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
-
+#my lib
 import conf
+#connect and make oauth1-session to twitter
+def makesession():
+    return OAuth1Session(conf.CK, conf.CS, conf.t_AT, conf.AS)
 #get favs or tweets data
 def retrieve(url,session):
     max=""
@@ -41,8 +45,40 @@ def retrieve(url,session):
             break
     return idlist,int(idlist/2)
 #IDEA:
+#個別jsonを取得してリスト->export_twit_csvに渡す
+
 #lookup wheter tweet contains image(tweet_id)(return url_list)
+def confirm_exist_image(id,session):
+    url = "https://api.twitter.com/1.1/statuses/lookup.json"
+    param={
+        "id" : id_twe
+    }
+    res = s.get(url, params = params)
+    if res.status_code == 200:
+        twi_data = json.loads(res.text)
+        urls=[]
+        for i in [0,1,2,3]:
+            try:
+                urls.append(twi_data[0]["extended_entities"]["media"][i]["media_url_https"])
+            except KeyError:
+                break
+    else:
+        print ("Error: %d" % req.status_code)
+    return  urls
 #CSV export(session,name)
+# def export_twit_csv(path=os.getcwd(),mode="w",session):
+#     id_list=reirieve("https://api.twitter.com/1.1/statuses/user_timeline.json",session)[0]
+#             i=1
+#             with open(path,mode) as f:
+#                     writer = csv.writer(f)
+#                     for line in :
+#                         writer.writerow([
+#                         i+ii*twit,          #seqnum
+#                         line['text'],       #tweet_content
+#                         line['created_at']])#postdate
+#                         id=int(line['id'])
+#                         i+=1
+#...
 #schedule func using higher-order function(func,time)
 #download from url(url,savepath=os.getcwd())
 #delete tweet every tweet_id

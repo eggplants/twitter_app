@@ -25,6 +25,7 @@ while True:
         for lines in timelines:
             if old < lines["id"]:
                 #post to LINE
+                print(lines["id"])
                 l = LineBotApi(conf.l_AT)
                 messages = TextSendMessage(text=lines["text"]+"\n"
                                                 +lines['created_at']+"\n"

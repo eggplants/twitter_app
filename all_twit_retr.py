@@ -19,7 +19,7 @@ for ii in range(0,10**19):
         'screen_name' : conf.t_user_id,
         'max_id' : max
         }
-    twitter = OAuth1Session(conf.CK, conf.CS, conf.AT, conf.AS)
+    twitter = OAuth1Session(conf.CK, conf.CS, conf.t_AT, conf.AS)
     req = twitter.get(url, params = params)
     if req.status_code == 200:
         timelines = json.loads(req.text)
