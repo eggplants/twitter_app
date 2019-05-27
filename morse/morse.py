@@ -36,23 +36,3 @@ def convs(str,lang):
     for i in str:
         ans.append([k for k,v in lang.items() if v==i][0])
     return "".join(ans)
-#main()
-import re
-import time
-i=0
-with open('data.txt',"r") as lines:
-    for line in lines:
-        i+=1
-        print(i)
-        try:
-            str=convdic(line.rstrip())
-            #time.sleep(1)
-            if re.match(r"[－・]","".join(str[0])):
-                print(convs(str[0],str[1]))
-                #time.sleep(1)
-            else:
-                print(convm(str[0],str[1]))
-                #time.sleep(1)
-        except IndexError:
-                print("<?>")
-    lines.close()
