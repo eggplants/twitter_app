@@ -1,4 +1,3 @@
-import re
 def convdic(str):
     import re
     import morse_dictionary as dic
@@ -35,13 +34,25 @@ def convm(str,lang):
 def convs(str,lang):
     ans=[]
     for i in str:
-        print(i)
         ans.append([k for k,v in lang.items() if v==i][0])
     return "".join(ans)
-
 #main()
-str=convdic(input())
-if re.match(r"[－・]","".join(str[0])):
-    print(convs(str[0],str[1]))
-else:
-    print(convm(str[0],str[1]))
+import re
+import time
+i=0
+with open('data.txt',"r") as lines:
+    for line in lines:
+        i+=1
+        print(i)
+        try:
+            str=convdic(line.rstrip())
+            #time.sleep(1)
+            if re.match(r"[－・]","".join(str[0])):
+                print(convs(str[0],str[1]))
+                #time.sleep(1)
+            else:
+                print(convm(str[0],str[1]))
+                #time.sleep(1)
+        except IndexError:
+                print("<?>")
+    lines.close()
