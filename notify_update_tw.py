@@ -29,4 +29,4 @@ while True:
                 old = lines["id"]
     else:
         print ("Error: %d" % req.status_code)
-    sleep(10)
+    sleep(60)
