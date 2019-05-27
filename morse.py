@@ -21,9 +21,9 @@ def convdic(str):
         lang=dic.jpn
     #モールス(英日の解釈の選択)
     elif re.match(r"[－・]",str):
-        str=list(str)
+        str=str.split()
         lang_d={"0":dic.jpn,"1":dic.eng}
-        lang=lang_d[0]#デフォルトは和文モールスで
+        lang=lang_d["0"]#デフォルトは和文モールスで
     return str,lang
 #文からモールス
 def convm(str,lang):
@@ -35,9 +35,10 @@ def convm(str,lang):
 def convs(str,lang):
     ans=[]
     for i in str:
-          ans.append([k for k,v in lang.items() if v==i][0])
+        print(i)
+        ans.append([k for k,v in lang.items() if v==i][0])
     return "".join(ans)
-    
+
 #main()
 str=convdic(input())
 if re.match(r"[－・]","".join(str[0])):
