@@ -32,8 +32,8 @@ for ii in range(0,10**19):
                 for line in timelines:
                     writer.writerow([
                     # i+ii*twit,          #seqnum
-                    line['text']     #tweet_content
-                    # line['created_at']
+                    line['text'],     #tweet_content
+                    line['created_at']
                     ])
                     id=int(line['id'])
                     i+=1
