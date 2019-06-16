@@ -61,7 +61,7 @@ def del_fav_all(list_fav,s):
     return "いいね全消し"
 #delete half of tweets
 def del_twe_hal(list_twe,s):
-    for id in list_twe[0][list_twe[1]:]
+    for id in list_twe[0][list_twe[1]:
     return "つぶやき半消し"
 #delete tweets all
 def del_twe_all(list_twe,s):
