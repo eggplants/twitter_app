@@ -51,7 +51,7 @@ def notify_line(seed,result):
     l.push_message(conf.l_id, messages=messages)
 #delete half of favorites
 def del_fav_hal(list_fav,s):
-    for id in list_fav[0][list_fav[1]:]:
+    for id in list_fav[0][list_fav[1]]:
         del_fav(id,s)
     return "いいね半消し"
 #delete favorites all
@@ -61,9 +61,11 @@ def del_fav_all(list_fav,s):
     return "いいね全消し"
 #delete half of tweets
 def del_twe_hal(list_twe,s):
-    for id in list_twe[0][list_twe[1]:
+    for id in list_twe[0][list_twe[1]]:
+	del_twe(id,s)
     return "つぶやき半消し"
 #delete tweets all
+
 def del_twe_all(list_twe,s):
     for id in list_twe:
         del_twe(id,s)
