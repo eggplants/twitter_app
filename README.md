@@ -11,5 +11,10 @@
 - [LINE API](https://developers.line.biz/)
   - access token
   - user id
+
+```bash
+pip install requests requests_oauthlib line-bot-sdk requests schedule
+```
+
 <br>
 (please make **conf.py** by rewriting **conf_example.py**)
